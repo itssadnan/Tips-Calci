@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div class="bill-cart-values people-count">
           Total no of people
-          <p>$${numberOfPeople}</p>
+          <p>${numberOfPeople}</p>
         </div>
         <div class="bill-cart-values tip-per-amount">
           Tip per person
