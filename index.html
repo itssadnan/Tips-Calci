@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=League+Spartan:wght@100..900&family=Sora:wght@100..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="main-container">
+    <div class="logo">
+        <img src="images/logo.svg" alt="logo">
+    </div>
+
+    <div class="calculator-container">
+        <div class="calculator-layout">
+            <section class="input-section">
+                <div class="input-label">Bill</div>
+                <div class="input-field">
+                    <span class="icon">$</span>
+                    <input type="number" id="bill-input" placeholder="0" min="0" step="0.01">
+                </div>
+
+                <div class="input-label">Select Tip %</div>
+                <div class="tip-grid">
+                    <button class="tip-btn" value="5">5%</button>
+                    <button class="tip-btn" value="10">10%</button>
+                    <button class="tip-btn" value="15">15%</button>
+                    <button class="tip-btn" value="25">25%</button>
+                    <button class="tip-btn" value="50">50%</button>
+                    <input type="number" class="tip-btn custom-tip" id="custom-tip" placeholder="Custom" min="0">
+                </div>
+
+                <div class="input-label">Number of People</div>
+                <div class="input-field people-field" id="people-field">
+                    <span class="icon">👤</span>
+                    <span class="error-msg">Invalid</span>
+                    <input type="number" id="people-input" placeholder="1" min="1" value="1">
+                </div>
+            </section>
+
+            <section class="result-section">
+                <div>
+                    <div class="amount-display">
+                        <div class="amount-label">
+                            Tip Amount
+                            <div class="sub-text">/ person</div>
+                        </div>
+                        <div class="amount-value" id="tip-amount">$0.00</div>
+                    </div>
+
+                    <div class="amount-display">
+                        <div class="amount-label">
+                            Total
+                            <div class="sub-text">/ person</div>
+                        </div>
+                        <div class="amount-value" id="total-amount">$0.00</div>
+                    </div>
+                </div>
+
+                <button class="reset-btn" id="reset-btn" disabled>RESET</button>
+                <button class="add-btn" id="add-btn" disabled>ADD BILL</button>
+            </section>
+        </div>
+    </div>
+    <div class="bills-header">
+      Bills Added
+    </div>
+    <section class="added-bills" id="bill-container"> 
+      <div class="bill-cart">
+        <div class="bill-cart-values total-amount">
+          Total Amount
+          <p>$100</p>
+        </div>
+        <div class="bill-cart-values people-count">
+          Total no of people
+          <p>5</p>
+        </div>
+        <div class="bill-cart-values tip-per-amount">
+          Tip per person
+          <p>$2</p>
+        </div>
+        <div class="bill-cart-values tip-per-amount">
+         Amount per person
+          <p>$12</p>
+        </div>
+      </div>
+    </section>
+</main>
+
+    <script src="script.js"></script>
+</body>
+</html>
